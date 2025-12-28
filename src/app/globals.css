@@ -1,0 +1,335 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ===== FishVault Theme - Rose Quartz / Girly Pink ===== */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-quicksand);
+  
+  /* Sidebar tokens */
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  
+  /* Chart tokens */
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  
+  /* Core tokens */
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  
+  /* Radius tokens */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  
+  /* FishVault Pink custom colors */
+  --color-hot-pink: oklch(0.70 0.22 350);
+  --color-rose: oklch(0.78 0.18 350);
+  --color-blush: oklch(0.85 0.12 350);
+  --color-lavender: oklch(0.75 0.12 300);
+  --color-cream: oklch(0.95 0.02 350);
+}
+
+/* ===== FishVault Pink Theme (Default) ===== */
+:root {
+  --radius: 0.75rem;
+  
+  /* Backgrounds - Soft Rose/Mauve */
+  --background: oklch(0.14 0.03 330);
+  --foreground: oklch(0.95 0.02 350);
+  
+  /* Cards - Soft pink glass */
+  --card: oklch(0.18 0.04 330);
+  --card-foreground: oklch(0.95 0.02 350);
+  
+  /* Popover */
+  --popover: oklch(0.16 0.035 330);
+  --popover-foreground: oklch(0.95 0.02 350);
+  
+  /* Primary - Hot Pink */
+  --primary: oklch(0.72 0.20 350);
+  --primary-foreground: oklch(0.12 0.03 330);
+  
+  /* Secondary */
+  --secondary: oklch(0.22 0.04 330);
+  --secondary-foreground: oklch(0.92 0.02 350);
+  
+  /* Muted */
+  --muted: oklch(0.24 0.035 330);
+  --muted-foreground: oklch(0.65 0.04 330);
+  
+  /* Accent */
+  --accent: oklch(0.72 0.20 350 / 0.15);
+  --accent-foreground: oklch(0.82 0.16 350);
+  
+  /* Destructive */
+  --destructive: oklch(0.60 0.24 25);
+  
+  /* Borders */
+  --border: oklch(1 0 0 / 0.10);
+  --input: oklch(1 0 0 / 0.12);
+  --ring: oklch(0.72 0.20 350);
+  
+  /* Charts */
+  --chart-1: oklch(0.72 0.20 350);
+  --chart-2: oklch(0.75 0.15 300);
+  --chart-3: oklch(0.70 0.18 20);
+  --chart-4: oklch(0.78 0.14 80);
+  --chart-5: oklch(0.65 0.20 280);
+  
+  /* Sidebar */
+  --sidebar: oklch(0.14 0.03 330);
+  --sidebar-foreground: oklch(0.92 0.02 350);
+  --sidebar-primary: oklch(0.72 0.20 350);
+  --sidebar-primary-foreground: oklch(0.12 0.03 330);
+  --sidebar-accent: oklch(0.72 0.20 350 / 0.12);
+  --sidebar-accent-foreground: oklch(0.82 0.16 350);
+  --sidebar-border: oklch(1 0 0 / 0.08);
+  --sidebar-ring: oklch(0.72 0.20 350);
+}
+
+/* Light pink theme (optional) */
+.light {
+  --background: oklch(0.97 0.015 350);
+  --foreground: oklch(0.20 0.04 330);
+  --card: oklch(1 0.01 350);
+  --card-foreground: oklch(0.20 0.04 330);
+  --popover: oklch(1 0.01 350);
+  --popover-foreground: oklch(0.20 0.04 330);
+  --primary: oklch(0.65 0.22 350);
+  --primary-foreground: oklch(0.98 0.01 350);
+  --secondary: oklch(0.95 0.02 350);
+  --secondary-foreground: oklch(0.25 0.04 330);
+  --muted: oklch(0.94 0.02 350);
+  --muted-foreground: oklch(0.50 0.03 330);
+  --accent: oklch(0.65 0.22 350 / 0.12);
+  --accent-foreground: oklch(0.58 0.20 350);
+  --destructive: oklch(0.55 0.25 25);
+  --border: oklch(0 0 0 / 0.08);
+  --input: oklch(0 0 0 / 0.06);
+  --ring: oklch(0.65 0.22 350);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  
+  /* Custom scrollbar for pink theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: oklch(0.14 0.03 330);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.35 0.06 330);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.45 0.08 340);
+  }
+}
+
+/* ===== FishVault Custom Utilities ===== */
+
+@layer utilities {
+  /* Text gradient utility - Pink */
+  .text-gradient-pink {
+    background: linear-gradient(135deg, oklch(0.72 0.20 350) 0%, oklch(0.78 0.16 320) 50%, oklch(0.75 0.15 300) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Glow effects - Pink */
+  .glow-pink {
+    box-shadow: 
+      0 0 20px oklch(0.72 0.20 350 / 0.35),
+      0 0 60px oklch(0.72 0.20 350 / 0.15);
+  }
+  
+  .glow-pink-lg {
+    box-shadow: 
+      0 0 30px oklch(0.72 0.20 350 / 0.45),
+      0 0 80px oklch(0.72 0.20 350 / 0.25),
+      0 0 120px oklch(0.72 0.20 350 / 0.15);
+  }
+  
+  /* Glass effect - Pink tinted */
+  .glass {
+    background: oklch(0.20 0.04 330 / 0.6);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid oklch(1 0 0 / 0.10);
+  }
+  
+  .glass-strong {
+    background: oklch(0.18 0.04 330 / 0.8);
+    backdrop-filter: blur(24px) saturate(200%);
+    border: 1px solid oklch(1 0 0 / 0.12);
+  }
+  
+  /* Hearts pattern background */
+  .hearts-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 30l-7.5-7.5c-2.5-2.5-2.5-6.5 0-9 2.5-2.5 6.5-2.5 9 0l.5.5.5-.5c2.5-2.5 6.5-2.5 9 0s2.5 6.5 0 9L20 30z' fill='%23ff69b4' fill-opacity='0.03'/%3E%3C/svg%3E");
+  }
+  
+  /* Sparkle grid background */
+  .sparkle-grid {
+    background-image: 
+      radial-gradient(circle at 25% 25%, oklch(0.72 0.20 350 / 0.08) 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, oklch(0.75 0.15 300 / 0.06) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
+
+/* ===== Animations ===== */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 20px oklch(0.72 0.20 350 / 0.35);
+    opacity: 1;
+  }
+  50% { 
+    box-shadow: 0 0 40px oklch(0.72 0.20 350 / 0.55);
+    opacity: 0.85;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes heart-beat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    oklch(1 0 0 / 0) 0%,
+    oklch(1 0 0 / 0.08) 50%,
+    oklch(1 0 0 / 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.animate-heart-beat {
+  animation: heart-beat 1.5s ease-in-out infinite;
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
